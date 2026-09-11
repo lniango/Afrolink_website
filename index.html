@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Neotech-Consulting — Construire, Innover, Transformer.</title>
+<title data-i18n="meta.title">Neotech-Consulting — Construire, Innover, Transformer.</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
@@ -14,21 +14,25 @@
   <div class="wrap nav">
     <a href="#top" class="brand">
       <img src="images/logo.jpeg" alt="Neotech-Consulting">
-      <span class="brand-text">Neotech-Consulting<small>Construire · Innover · Transformer</small></span>
+      <span class="brand-text">Neotech-Consulting<small data-i18n="nav.tagline">Construire · Innover · Transformer</small></span>
     </a>
     <nav class="links">
-      <a href="#accueil">Accueil</a>
-      <a href="#approche">Notre approche</a>
-      <a href="#projets">Projets</a>
-      <a href="#equipe">Équipe</a>
-      <a href="#ressources">Ressources</a>
-      <a href="#carrieres">Carrières</a>
-      <a href="#contact">Contact</a>
+      <a href="#accueil" data-i18n="nav.accueil">Accueil</a>
+      <a href="#approche" data-i18n="nav.approche">Notre approche</a>
+      <a href="#projets" data-i18n="nav.projets">Projets</a>
+      <a href="#equipe" data-i18n="nav.equipe">Équipe</a>
+      <a href="#ressources" data-i18n="nav.ressources">Ressources</a>
+      <a href="#carrieres" data-i18n="nav.carrieres">Carrières</a>
+      <a href="#contact" data-i18n="nav.contact">Contact</a>
     </nav>
+    <div class="lang-switch" id="langSwitch" role="group" aria-label="Choisir la langue / Choose language">
+      <button type="button" data-lang="fr" class="is-active">FR</button>
+      <button type="button" data-lang="en">EN</button>
+    </div>
     <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-navigation" aria-label="Ouvrir le menu">
       <span></span><span></span><span></span>
     </button>
-    <a href="#contact" class="btn btn-primary">Contactez-nous</a>
+    <a href="#contact" class="btn btn-primary" data-i18n="nav.cta">Contactez-nous</a>
   </div>
 </header>
 
@@ -39,11 +43,11 @@
     <canvas id="heroShader" class="hero-shader" aria-hidden="true"></canvas>
     <div class="wrap hero-inner">
       <div>
-        <h1>Au-delà du code, <span class="accent">nous bâtissons</span> les solutions de demain.</h1>
-        <p class="lede">Neotech-Consulting est une communauté d'experts qui transforme des défis complexes en opportunités tangibles pour les entreprises et les territoires. Nous ne nous contentons pas de développer des logiciels : nous co-construisons l'avenir numérique de nos clients.</p>
+        <h1 data-i18n="hero.h1" data-i18n-html="1">Au-delà du code, <span class="accent">nous bâtissons</span> les solutions de demain.</h1>
+        <p class="lede" data-i18n="hero.lede">Neotech-Consulting est une communauté d'experts qui transforme des défis complexes en opportunités tangibles pour les entreprises et les territoires. Nous ne nous contentons pas de développer des logiciels : nous co-construisons l'avenir numérique de nos clients.</p>
         <div class="hero-cta">
-          <a href="#projets" class="btn btn-primary">Voir notre impact</a>
-          <a href="#carrieres" class="btn btn-ghost btn-on-dark">Rejoindre le mouvement</a>
+          <a href="#projets" class="btn btn-primary" data-i18n="hero.cta1">Voir notre impact</a>
+          <a href="#carrieres" class="btn btn-ghost btn-on-dark" data-i18n="hero.cta2">Rejoindre le mouvement</a>
         </div>
       </div>
     </div>
@@ -53,22 +57,22 @@
   <section class="mission">
     <div class="wrap mission-grid">
       <div data-reveal>
-        <h2>Construire, Innover, Transformer.</h2>
-        <p class="mission-text">Nous sommes partis d'un constat simple : la technologie est un levier puissant de croissance, mais son potentiel est souvent sous-exploité par manque d'expertise locale et de vision stratégique. Neotech-Consulting est né de la volonté de changer cela.</p>
-        <p class="mission-text">Notre mission est de réunir les meilleurs talents en architecture logicielle, Data, IA et IoT pour créer des solutions innovantes qui répondent aux vrais besoins des entreprises, tout en formant la prochaine génération de leaders technologiques.</p>
+        <h2 data-i18n="mission.h2">Construire, Innover, Transformer.</h2>
+        <p class="mission-text" data-i18n="mission.p1">Nous sommes partis d'un constat simple : la technologie est un levier puissant de croissance, mais son potentiel est souvent sous-exploité par manque d'expertise locale et de vision stratégique. Neotech-Consulting est né de la volonté de changer cela.</p>
+        <p class="mission-text" data-i18n="mission.p2">Notre mission est de réunir les meilleurs talents en architecture logicielle, Data, IA et IoT pour créer des solutions innovantes qui répondent aux vrais besoins des entreprises, tout en formant la prochaine génération de leaders technologiques.</p>
       </div>
       <dl class="values-list" data-reveal>
         <div class="value-row">
-          <dt>Impact</dt>
-          <dd>Nous mesurons notre succès à la valeur réelle que nous apportons à nos clients, pas au nombre de lignes de code livrées.</dd>
+          <dt data-i18n="value.impact.title">Impact</dt>
+          <dd data-i18n="value.impact.desc">Nous mesurons notre succès à la valeur réelle que nous apportons à nos clients, pas au nombre de lignes de code livrées.</dd>
         </div>
         <div class="value-row">
-          <dt>Excellence</dt>
-          <dd>Nous visons l'excellence technique dans tout ce que nous entreprenons, de l'architecture au dernier détail d'interface.</dd>
+          <dt data-i18n="value.excellence.title">Excellence</dt>
+          <dd data-i18n="value.excellence.desc">Nous visons l'excellence technique dans tout ce que nous entreprenons, de l'architecture au dernier détail d'interface.</dd>
         </div>
         <div class="value-row">
-          <dt>Partage</dt>
-          <dd>Nous croyons en la force du collectif et du transfert de compétences, à l'intérieur comme à l'extérieur de l'équipe.</dd>
+          <dt data-i18n="value.partage.title">Partage</dt>
+          <dd data-i18n="value.partage.desc">Nous croyons en la force du collectif et du transfert de compétences, à l'intérieur comme à l'extérieur de l'équipe.</dd>
         </div>
       </dl>
     </div>
@@ -78,29 +82,29 @@
   <section id="approche">
     <div class="wrap">
       <div class="section-head" data-reveal>
-        <h2>Quatre pôles, une même méthode</h2>
-        <p>Chez Neotech-Consulting, nous combinons une expertise technique de haut niveau avec une compréhension fine de vos enjeux métiers.</p>
+        <h2 data-i18n="approche.h2">Quatre pôles, une même méthode</h2>
+        <p data-i18n="approche.p">Chez Neotech-Consulting, nous combinons une expertise technique de haut niveau avec une compréhension fine de vos enjeux métiers.</p>
       </div>
       <div class="services-list" data-reveal>
         <div class="service-row">
-          <h3>Conseil &amp; Stratégie technologique</h3>
-          <p>Audit technique et architectural, feuille de route technologique et accompagnement à la transformation digitale, pour bâtir une trajectoire claire plutôt qu'une pile d'outils.</p>
-          <div class="svc-tech"><span>Audit</span><span>Roadmap</span><span>Gouvernance</span></div>
+          <h3 data-i18n="svc.conseil.h3">Conseil &amp; Stratégie technologique</h3>
+          <p data-i18n="svc.conseil.p">Audit technique et architectural, feuille de route technologique et accompagnement à la transformation digitale, pour bâtir une trajectoire claire plutôt qu'une pile d'outils.</p>
+          <div class="svc-tech"><span data-i18n="svc.tag.audit">Audit</span><span data-i18n="svc.tag.roadmap">Roadmap</span><span data-i18n="svc.tag.gouvernance">Gouvernance</span></div>
         </div>
         <div class="service-row">
-          <h3>Création &amp; Innovation</h3>
-          <p>Architecture cloud-native, microservices et développement sur-mesure, pensés pour la scalabilité et la résilience dès la première ligne de code.</p>
+          <h3 data-i18n="svc.creation.h3">Création &amp; Innovation</h3>
+          <p data-i18n="svc.creation.p">Architecture cloud-native, microservices et développement sur-mesure, pensés pour la scalabilité et la résilience dès la première ligne de code.</p>
           <div class="svc-tech"><span>Kubernetes</span><span>Docker</span><span>Terraform</span></div>
         </div>
         <div class="service-row">
-          <h3>Données &amp; Intelligence Artificielle</h3>
-          <p>Pipelines de données robustes, modèles prédictifs et agents IA, conçus pour un usage métier concret et mesurable, avec une vraie exigence de qualité de la donnée.</p>
+          <h3 data-i18n="svc.donnees.h3">Données &amp; Intelligence Artificielle</h3>
+          <p data-i18n="svc.donnees.p">Pipelines de données robustes, modèles prédictifs et agents IA, conçus pour un usage métier concret et mesurable, avec une vraie exigence de qualité de la donnée.</p>
           <div class="svc-tech"><span>Python</span><span>Spark</span><span>TensorFlow</span></div>
         </div>
         <div class="service-row">
-          <h3>Ingénierie IoT</h3>
-          <p>De l'idée au produit connecté : capteurs terrain, traitement en temps réel en périphérie de réseau (edge), et tableaux de bord pour piloter ce qui compte.</p>
-          <div class="svc-tech"><span>MQTT</span><span>OPC-UA</span><span>Edge computing</span></div>
+          <h3 data-i18n="svc.iot.h3">Ingénierie IoT</h3>
+          <p data-i18n="svc.iot.p">De l'idée au produit connecté : capteurs terrain, traitement en temps réel en périphérie de réseau (edge), et tableaux de bord pour piloter ce qui compte.</p>
+          <div class="svc-tech"><span>MQTT</span><span>OPC-UA</span><span data-i18n="svc.tag.edge">Edge computing</span></div>
         </div>
       </div>
     </div>
@@ -110,47 +114,47 @@
   <section id="projets" style="background:var(--white); border-top:1px solid var(--line); border-bottom:1px solid var(--line);">
     <div class="wrap">
       <div class="section-head" data-reveal>
-        <div class="eyebrow"><span class="pixel-mark"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span>Portfolio d'impact</div>
-        <h2>Découvrez comment nous transformons les idées en solutions concrètes</h2>
-        <p>Chaque projet part d'un problème réel identifié sur le terrain. Voici ceux sur lesquels nous travaillons actuellement, regroupés par thématique.</p>
+        <div class="eyebrow"><span class="pixel-mark"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span><span data-i18n="portfolio.eyebrow">Portfolio d'impact</span></div>
+        <h2 data-i18n="portfolio.h2">Découvrez comment nous transformons les idées en solutions concrètes</h2>
+        <p data-i18n="portfolio.p">Chaque projet part d'un problème réel identifié sur le terrain. Voici ceux sur lesquels nous travaillons actuellement, regroupés par thématique.</p>
       </div>
 
       <div class="project-filters" data-project-filters aria-label="Filtrer les projets par domaine">
-        <button type="button" class="is-active" data-filter="all" aria-pressed="true">Tous les projets</button>
-        <button type="button" data-filter="logistique" aria-pressed="false">Logistique</button>
-        <button type="button" data-filter="formation" aria-pressed="false">Formation</button>
-        <button type="button" data-filter="ia" aria-pressed="false">IA &amp; automatisation</button>
-        <button type="button" data-filter="fabrication" aria-pressed="false">Fabrication</button>
-        <button type="button" data-filter="agritech" aria-pressed="false">AgriTech</button>
+        <button type="button" class="is-active" data-filter="all" aria-pressed="true" data-i18n="filter.all">Tous les projets</button>
+        <button type="button" data-filter="logistique" aria-pressed="false" data-i18n="filter.logistique">Logistique</button>
+        <button type="button" data-filter="formation" aria-pressed="false" data-i18n="filter.formation">Formation</button>
+        <button type="button" data-filter="ia" aria-pressed="false" data-i18n="filter.ia">IA &amp; automatisation</button>
+        <button type="button" data-filter="fabrication" aria-pressed="false" data-i18n="filter.fabrication">Fabrication</button>
+        <button type="button" data-filter="agritech" aria-pressed="false" data-i18n="filter.agritech">AgriTech</button>
       </div>
 
       <!-- Logistique & Services -->
       <div class="theme-group" data-reveal data-project-theme="logistique">
-        <div class="theme-title">Logistique &amp; Services de proximité</div>
+        <div class="theme-title" data-i18n="theme.logistique">Logistique &amp; Services de proximité</div>
         <div class="projects-grid">
           <div class="project-card">
             <div class="project-top">
               <h3>Afrolink Delivery</h3>
-              <span class="status status-mvp">Prototype fonctionnel</span>
+              <span class="status status-mvp" data-i18n="status.mvp">Prototype fonctionnel</span>
             </div>
-            <p class="tagline">La logistique sans frontières.</p>
+            <p class="tagline" data-i18n="afrolink.tagline">La logistique sans frontières.</p>
             <div class="problem-solution">
-              <p><span class="ps-label">Le problème</span>Les entreprises et les particuliers ont du mal à trouver des livreurs fiables entre l'Afrique et l'étranger, avec peu de visibilité sur l'acheminement.</p>
-              <p><span class="ps-label">Notre solution</span>Une plateforme intelligente de mise en relation, avec suivi en temps réel et gestion optimisée des flux.</p>
+              <p><span class="ps-label" data-i18n="ps.label.problem">Le problème</span><span data-i18n="afrolink.problem">Les entreprises et les particuliers ont du mal à trouver des livreurs fiables entre l'Afrique et l'étranger, avec peu de visibilité sur l'acheminement.</span></p>
+              <p><span class="ps-label" data-i18n="ps.label.solution">Notre solution</span><span data-i18n="afrolink.solution">Une plateforme intelligente de mise en relation, avec suivi en temps réel et gestion optimisée des flux.</span></p>
             </div>
-            <div class="tech-tags"><span>React Native</span><span>Node.js</span><span>API de géolocalisation</span></div>
-            <a class="project-link" href="https://github.com/LeKani/Afrolink/tree/master" target="_blank" rel="noopener">Consulter le code sur GitHub</a>
+            <div class="tech-tags"><span>React Native</span><span>Node.js</span><span data-i18n="tag.geoapi">API de géolocalisation</span></div>
+            <a class="project-link" href="https://github.com/LeKani/Afrolink/tree/master" target="_blank" rel="noopener" data-i18n="project.link.github">Consulter le code sur GitHub</a>
           </div>
 
           <div class="project-card">
             <div class="project-top">
               <h3>ServiLink</h3>
-              <span class="status status-conception">En conception</span>
+              <span class="status status-conception" data-i18n="status.conception">En conception</span>
             </div>
-            <p class="tagline">Le quotidien des résidences, simplifié.</p>
+            <p class="tagline" data-i18n="servilink.tagline">Le quotidien des résidences, simplifié.</p>
             <div class="problem-solution">
-              <p><span class="ps-label">Le problème</span>Les résidences et copropriétés jonglent avec de multiples prestataires dispersés pour les services du quotidien.</p>
-              <p><span class="ps-label">Notre solution</span>Une plateforme unique pour connecter résidences et prestataires : petit-déjeuner, chauffeurs, conciergerie.</p>
+              <p><span class="ps-label" data-i18n="ps.label.problem">Le problème</span><span data-i18n="servilink.problem">Les résidences et copropriétés jonglent avec de multiples prestataires dispersés pour les services du quotidien.</span></p>
+              <p><span class="ps-label" data-i18n="ps.label.solution">Notre solution</span><span data-i18n="servilink.solution">Une plateforme unique pour connecter résidences et prestataires : petit-déjeuner, chauffeurs, conciergerie.</span></p>
             </div>
             <div class="tech-tags"><span>React Native</span><span>Node.js</span><span>MongoDB</span></div>
           </div>
@@ -159,17 +163,17 @@
 
       <!-- Formation -->
       <div class="theme-group" data-reveal data-project-theme="formation">
-        <div class="theme-title">Formation</div>
+        <div class="theme-title" data-i18n="theme.formation">Formation</div>
         <div class="projects-grid">
           <div class="project-card">
             <div class="project-top">
               <h3>EduLink</h3>
-              <span class="status status-dev">En développement</span>
+              <span class="status status-dev" data-i18n="status.dev">En développement</span>
             </div>
-            <p class="tagline">Apprendre, où que l'on soit.</p>
+            <p class="tagline" data-i18n="edulink.tagline">Apprendre, où que l'on soit.</p>
             <div class="problem-solution">
-              <p><span class="ps-label">Le problème</span>Trouver une formation en ligne fiable et adaptée à son niveau reste un parcours confus pour beaucoup d'apprenants.</p>
-              <p><span class="ps-label">Notre solution</span>Une plateforme qui met en relation organismes de formation et apprenants, avec suivi pédagogique et certification.</p>
+              <p><span class="ps-label" data-i18n="ps.label.problem">Le problème</span><span data-i18n="edulink.problem">Trouver une formation en ligne fiable et adaptée à son niveau reste un parcours confus pour beaucoup d'apprenants.</span></p>
+              <p><span class="ps-label" data-i18n="ps.label.solution">Notre solution</span><span data-i18n="edulink.solution">Une plateforme qui met en relation organismes de formation et apprenants, avec suivi pédagogique et certification.</span></p>
             </div>
             <div class="tech-tags"><span>Next.js</span><span>Django</span><span>PostgreSQL</span></div>
           </div>
@@ -178,17 +182,17 @@
 
       <!-- IA & Automatisation -->
       <div class="theme-group" data-reveal data-project-theme="ia">
-        <div class="theme-title">Intelligence artificielle &amp; automatisation</div>
+        <div class="theme-title" data-i18n="theme.ia">Intelligence artificielle &amp; automatisation</div>
         <div class="projects-grid">
           <div class="project-card">
             <div class="project-top">
               <h3>IAgents</h3>
-              <span class="status status-dev">En développement</span>
+              <span class="status status-dev" data-i18n="status.dev">En développement</span>
             </div>
-            <p class="tagline">Des agents IA qui travaillent vraiment pour vous.</p>
+            <p class="tagline" data-i18n="iagents.tagline">Des agents IA qui travaillent vraiment pour vous.</p>
             <div class="problem-solution">
-              <p><span class="ps-label">Le problème</span>Particuliers et entreprises passent un temps précieux sur des tâches répétitives d'information et de support.</p>
-              <p><span class="ps-label">Notre solution</span>Une suite d'agents IA spécialisés : assistants conversationnels et assistants documentaires, sur mesure.</p>
+              <p><span class="ps-label" data-i18n="ps.label.problem">Le problème</span><span data-i18n="iagents.problem">Particuliers et entreprises passent un temps précieux sur des tâches répétitives d'information et de support.</span></p>
+              <p><span class="ps-label" data-i18n="ps.label.solution">Notre solution</span><span data-i18n="iagents.solution">Une suite d'agents IA spécialisés : assistants conversationnels et assistants documentaires, sur mesure.</span></p>
             </div>
             <div class="tech-tags"><span>Python</span><span>LangChain</span><span>Claude API</span><span>Vector DB</span></div>
           </div>
@@ -196,65 +200,65 @@
           <div class="project-card">
             <div class="project-top">
               <h3>Automation Pro</h3>
-              <span class="status status-recherche">Recherche de financement</span>
+              <span class="status status-recherche" data-i18n="status.recherche">Recherche de financement</span>
             </div>
-            <p class="tagline">Moins de tâches, plus de valeur.</p>
+            <p class="tagline" data-i18n="autopro.tagline">Moins de tâches, plus de valeur.</p>
             <div class="problem-solution">
-              <p><span class="ps-label">Le problème</span>Les équipes RH et comptables perdent un temps considérable sur des processus manuels et répétitifs.</p>
-              <p><span class="ps-label">Notre solution</span>Des solutions d'automatisation des processus d'entreprise, pour libérer du temps aux équipes.</p>
+              <p><span class="ps-label" data-i18n="ps.label.problem">Le problème</span><span data-i18n="autopro.problem">Les équipes RH et comptables perdent un temps considérable sur des processus manuels et répétitifs.</span></p>
+              <p><span class="ps-label" data-i18n="ps.label.solution">Notre solution</span><span data-i18n="autopro.solution">Des solutions d'automatisation des processus d'entreprise, pour libérer du temps aux équipes.</span></p>
             </div>
-            <div class="tech-tags"><span>Python</span><span>RPA</span><span>n8n</span><span>APIs internes</span></div>
+            <div class="tech-tags"><span>Python</span><span>RPA</span><span>n8n</span><span data-i18n="tag.internalapis">APIs internes</span></div>
           </div>
         </div>
       </div>
 
       <!-- Fabrication -->
       <div class="theme-group" data-reveal data-project-theme="fabrication">
-        <div class="theme-title">Fabrication &amp; design</div>
+        <div class="theme-title" data-i18n="theme.fabrication">Fabrication &amp; design</div>
         <div class="projects-grid">
           <div class="project-card">
             <div class="project-top">
               <h3>3D-Light</h3>
-              <span class="status status-conception">En conception</span>
+              <span class="status status-conception" data-i18n="status.conception">En conception</span>
             </div>
-            <p class="tagline">Votre lampe, imaginée par vous.</p>
+            <p class="tagline" data-i18n="light3d.tagline">Votre lampe, imaginée par vous.</p>
             <div class="problem-solution">
-              <p><span class="ps-label">Le problème</span>La personnalisation d'objets du quotidien reste réservée à des designers ou des budgets élevés.</p>
-              <p><span class="ps-label">Notre solution</span>Une plateforme de configuration et de génération de lampes personnalisées, fabriquées à la demande en impression 3D.</p>
+              <p><span class="ps-label" data-i18n="ps.label.problem">Le problème</span><span data-i18n="light3d.problem">La personnalisation d'objets du quotidien reste réservée à des designers ou des budgets élevés.</span></p>
+              <p><span class="ps-label" data-i18n="ps.label.solution">Notre solution</span><span data-i18n="light3d.solution">Une plateforme de configuration et de génération de lampes personnalisées, fabriquées à la demande en impression 3D.</span></p>
             </div>
-            <div class="tech-tags"><span>Three.js</span><span>React</span><span>Impression 3D</span></div>
+            <div class="tech-tags"><span>Three.js</span><span>React</span><span data-i18n="tag.print3d">Impression 3D</span></div>
           </div>
         </div>
       </div>
 
       <!-- AgriTech -->
       <div class="theme-group" data-reveal data-project-theme="agritech">
-        <div class="theme-title">AgriTech</div>
+        <div class="theme-title" data-i18n="theme.agritech">AgriTech</div>
         <div class="projects-grid">
           <div class="project-card">
             <div class="project-top">
               <h3>AgriTech Connect</h3>
-              <span class="status status-recherche">Recherche de financement</span>
+              <span class="status status-recherche" data-i18n="status.recherche">Recherche de financement</span>
             </div>
-            <p class="tagline">Cultiver avec précision.</p>
+            <p class="tagline" data-i18n="agritech.tagline">Cultiver avec précision.</p>
             <div class="problem-solution">
-              <p><span class="ps-label">Le problème</span>Les exploitants agricoles manquent souvent de visibilité en temps réel sur l'état de leurs cultures et de leur élevage.</p>
-              <p><span class="ps-label">Notre solution</span>Des capteurs terrain connectés et des tableaux de bord temps réel pour une agriculture de précision.</p>
+              <p><span class="ps-label" data-i18n="ps.label.problem">Le problème</span><span data-i18n="agritech.problem">Les exploitants agricoles manquent souvent de visibilité en temps réel sur l'état de leurs cultures et de leur élevage.</span></p>
+              <p><span class="ps-label" data-i18n="ps.label.solution">Notre solution</span><span data-i18n="agritech.solution">Des capteurs terrain connectés et des tableaux de bord temps réel pour une agriculture de précision.</span></p>
             </div>
-            <div class="tech-tags"><span>Capteurs IoT</span><span>MQTT</span><span>Python</span></div>
+            <div class="tech-tags"><span data-i18n="tag.iotsensors">Capteurs IoT</span><span>MQTT</span><span>Python</span></div>
           </div>
 
           <div class="project-card">
             <div class="project-top">
               <h3>FarmLink</h3>
-              <span class="status status-conception">En conception</span>
+              <span class="status status-conception" data-i18n="status.conception">En conception</span>
             </div>
-            <p class="tagline">Du champ à l'assiette, sans détour.</p>
+            <p class="tagline" data-i18n="farmlink.tagline">Du champ à l'assiette, sans détour.</p>
             <div class="problem-solution">
-              <p><span class="ps-label">Le problème</span>Les producteurs agricoles ont un accès limité aux clients directs, et les marges disparaissent dans les intermédiaires.</p>
-              <p><span class="ps-label">Notre solution</span>Une plateforme de mise en relation directe entre producteurs et clients, pour des circuits courts et plus équitables.</p>
+              <p><span class="ps-label" data-i18n="ps.label.problem">Le problème</span><span data-i18n="farmlink.problem">Les producteurs agricoles ont un accès limité aux clients directs, et les marges disparaissent dans les intermédiaires.</span></p>
+              <p><span class="ps-label" data-i18n="ps.label.solution">Notre solution</span><span data-i18n="farmlink.solution">Une plateforme de mise en relation directe entre producteurs et clients, pour des circuits courts et plus équitables.</span></p>
             </div>
-            <div class="tech-tags"><span>React</span><span>Node.js</span><span>Géolocalisation</span></div>
+            <div class="tech-tags"><span>React</span><span>Node.js</span><span data-i18n="tag.geoloc">Géolocalisation</span></div>
           </div>
         </div>
       </div>
@@ -265,7 +269,7 @@
   <!-- CONFIANCE / PREUVE SOCIALE -->
   <section class="trust">
     <div class="wrap">
-      <p class="trust-statement" data-reveal>Neotech-Consulting est une structure jeune. Nous préférons vous montrer nos huit projets en cours plutôt que des témoignages inventés — cette section accueillera les retours de nos premiers clients dès qu'ils existeront.</p>
+      <p class="trust-statement" data-reveal data-i18n="trust.statement">Neotech-Consulting est une structure jeune. Nous préférons vous montrer nos huit projets en cours plutôt que des témoignages inventés — cette section accueillera les retours de nos premiers clients dès qu'ils existeront.</p>
     </div>
   </section>
 
@@ -274,45 +278,45 @@
     <div class="wrap team-grid">
       <div data-reveal>
         <div class="welcome-quote">
-          <p>Nous sommes une équipe de passionnés, réunis par une même ambition : construire des solutions technologiques qui ont du sens.</p>
-          <p>Architectes, développeurs, data scientists, experts IoT... nous croyons que la diversité des talents est notre plus grande force. Chaque projet que nous menons est une pièce d'un même chantier, pensé pour des besoins réels — et nous gardons la porte ouverte à qui veut construire avec nous.</p>
-          <div class="sig">— L'équipe fondatrice, Neotech-Consulting</div>
+          <p data-i18n="team.welcome.p1">Nous sommes une équipe de passionnés, réunis par une même ambition : construire des solutions technologiques qui ont du sens.</p>
+          <p data-i18n="team.welcome.p2">Architectes, développeurs, data scientists, experts IoT... nous croyons que la diversité des talents est notre plus grande force. Chaque projet que nous menons est une pièce d'un même chantier, pensé pour des besoins réels — et nous gardons la porte ouverte à qui veut construire avec nous.</p>
+          <div class="sig" data-i18n="team.welcome.sig">— L'équipe fondatrice, Neotech-Consulting</div>
         </div>
-        <a href="#carrieres" class="btn btn-ghost btn-on-dark" style="margin-top:30px;">Rejoignez-nous →</a>
+        <a href="#carrieres" class="btn btn-ghost btn-on-dark" style="margin-top:30px;" data-i18n="team.join">Rejoignez-nous →</a>
       </div>
       <div class="team-side" data-reveal>
-        <p>Notre équipe rassemble des profils complémentaires, tous engagés dans les projets présentés sur ce site. Nous fonctionnons comme un studio compact : peu de niveaux hiérarchiques, des décisions techniques prises près du terrain, et une vraie place laissée à l'initiative de chacun.</p>
+        <p data-i18n="team.side.p">Notre équipe rassemble des profils complémentaires, tous engagés dans les projets présentés sur ce site. Nous fonctionnons comme un studio compact : peu de niveaux hiérarchiques, des décisions techniques prises près du terrain, et une vraie place laissée à l'initiative de chacun.</p>
         <div class="founders">
           <div class="founder-card">
             <span class="avatar mono">AI</span>
-            <div class="role">Architecture &amp; Dev</div>
-            <h4>Pôle Ingénierie</h4>
+            <div class="role" data-i18n="founder.eng.role">Architecture &amp; Dev</div>
+            <h4 data-i18n="founder.eng.h4">Pôle Ingénierie</h4>
             <div class="stack mono">React · Node.js · Cloud</div>
-            <p class="quote">« Une bonne architecture se voit à ce qu'on ne remarque jamais. »</p>
+            <p class="quote" data-i18n="founder.eng.quote">« Une bonne architecture se voit à ce qu'on ne remarque jamais. »</p>
           </div>
           <div class="founder-card">
             <span class="avatar mono">DI</span>
-            <div class="role">Data &amp; IA</div>
-            <h4>Pôle Intelligence</h4>
+            <div class="role" data-i18n="founder.data.role">Data &amp; IA</div>
+            <h4 data-i18n="founder.data.h4">Pôle Intelligence</h4>
             <div class="stack mono">Python · LLM · MLOps</div>
-            <p class="quote">« La donnée n'a de valeur que si elle change une décision. »</p>
+            <p class="quote" data-i18n="founder.data.quote">« La donnée n'a de valeur que si elle change une décision. »</p>
           </div>
           <div class="founder-card">
             <span class="avatar mono orange">IO</span>
-            <div class="role">IoT &amp; Terrain</div>
-            <h4>Pôle Connecté</h4>
+            <div class="role" data-i18n="founder.iot.role">IoT &amp; Terrain</div>
+            <h4 data-i18n="founder.iot.h4">Pôle Connecté</h4>
             <div class="stack mono">Capteurs · MQTT · Edge</div>
-            <p class="quote">« Le meilleur capteur est celui qu'on oublie sur le terrain. »</p>
+            <p class="quote" data-i18n="founder.iot.quote">« Le meilleur capteur est celui qu'on oublie sur le terrain. »</p>
           </div>
           <div class="founder-card">
             <span class="avatar mono orange">CA</span>
-            <div class="role">Conseil</div>
-            <h4>Pôle Automatisation</h4>
+            <div class="role" data-i18n="founder.conseil.role">Conseil</div>
+            <h4 data-i18n="founder.conseil.h4">Pôle Automatisation</h4>
             <div class="stack mono">Audit · RPA · Process</div>
-            <p class="quote">« Automatiser un mauvais process, c'est juste faire l'erreur plus vite. »</p>
+            <p class="quote" data-i18n="founder.conseil.quote">« Automatiser un mauvais process, c'est juste faire l'erreur plus vite. »</p>
           </div>
         </div>
-        <p class="team-photo-note">Vos photos d'équipe et bios individuelles viendront enrichir cette section — nous avons volontairement gardé une présentation par pôle en attendant.</p>
+        <p class="team-photo-note" data-i18n="team.photo.note">Vos photos d'équipe et bios individuelles viendront enrichir cette section — nous avons volontairement gardé une présentation par pôle en attendant.</p>
       </div>
     </div>
   </section>
@@ -321,27 +325,27 @@
   <section id="ressources">
     <div class="wrap">
       <div class="section-head" data-reveal>
-        <h2>Nos réflexions, retours d'expérience et analyses</h2>
-        <p>Un espace pour partager ce que nous apprenons en construisant : tendances technologiques, retours de terrain, choix d'architecture. Les premiers articles arrivent bientôt.</p>
+        <h2 data-i18n="resources.h2">Nos réflexions, retours d'expérience et analyses</h2>
+        <p data-i18n="resources.p">Un espace pour partager ce que nous apprenons en construisant : tendances technologiques, retours de terrain, choix d'architecture. Les premiers articles arrivent bientôt.</p>
       </div>
       <div class="resource-grid" data-reveal>
         <div class="resource-card">
-          <span class="res-tag">IoT · Agriculture</span>
-          <h3>Pourquoi l'IoT est la clé de l'agriculture de demain</h3>
-          <p>Ce que nous avons appris en concevant des capteurs terrain pour AgriTech Connect, et pourquoi la précision change tout.</p>
-          <span class="res-status">À paraître</span>
+          <span class="res-tag" data-i18n="res1.tag">IoT · Agriculture</span>
+          <h3 data-i18n="res1.h3">Pourquoi l'IoT est la clé de l'agriculture de demain</h3>
+          <p data-i18n="res1.p">Ce que nous avons appris en concevant des capteurs terrain pour AgriTech Connect, et pourquoi la précision change tout.</p>
+          <span class="res-status" data-i18n="res.status">À paraître</span>
         </div>
         <div class="resource-card">
-          <span class="res-tag">Architecture</span>
-          <h3>Comment bien choisir son architecture logicielle</h3>
-          <p>Les questions à se poser avant de choisir une stack, au-delà des effets de mode technologiques.</p>
-          <span class="res-status">À paraître</span>
+          <span class="res-tag" data-i18n="res2.tag">Architecture</span>
+          <h3 data-i18n="res2.h3">Comment bien choisir son architecture logicielle</h3>
+          <p data-i18n="res2.p">Les questions à se poser avant de choisir une stack, au-delà des effets de mode technologiques.</p>
+          <span class="res-status" data-i18n="res.status">À paraître</span>
         </div>
         <div class="resource-card">
-          <span class="res-tag">Retour d'expérience</span>
-          <h3>Dans les coulisses de 3D-Light</h3>
-          <p>Retour sur le développement de notre plateforme de génération de lampes personnalisées en impression 3D.</p>
-          <span class="res-status">À paraître</span>
+          <span class="res-tag" data-i18n="res3.tag">Retour d'expérience</span>
+          <h3 data-i18n="res3.h3">Dans les coulisses de 3D-Light</h3>
+          <p data-i18n="res3.p">Retour sur le développement de notre plateforme de génération de lampes personnalisées en impression 3D.</p>
+          <span class="res-status" data-i18n="res.status">À paraître</span>
         </div>
       </div>
     </div>
@@ -351,23 +355,23 @@
   <section id="carrieres">
     <div class="wrap">
       <div class="section-head" data-reveal>
-        <h2>Nous n'accueillons pas des compétences, nous accueillons des talents</h2>
+        <h2 data-i18n="careers.h2">Nous n'accueillons pas des compétences, nous accueillons des talents</h2>
       </div>
       <div class="careers-grid" data-reveal>
         <div>
-          <p class="careers-intro">Vous êtes passionné par la technologie et vous cherchez à avoir un impact ? Chez Neotech-Consulting, nous ne recrutons pas des compétences, nous accueillons des talents qui partagent notre vision. Que vous soyez expert ou en début de carrière, si vous avez envie d'apprendre, de partager et de construire, votre place est ici.</p>
+          <p class="careers-intro" data-i18n="careers.intro">Vous êtes passionné par la technologie et vous cherchez à avoir un impact ? Chez Neotech-Consulting, nous ne recrutons pas des compétences, nous accueillons des talents qui partagent notre vision. Que vous soyez expert ou en début de carrière, si vous avez envie d'apprendre, de partager et de construire, votre place est ici.</p>
           <ul class="career-list">
-            <li><span class="dot"></span>Développeurs full-stack &amp; mobile</li>
-            <li><span class="dot"></span>Architectes logiciels</li>
-            <li><span class="dot"></span>Data scientists &amp; ingénieurs IA</li>
-            <li><span class="dot"></span>Experts IoT &amp; systèmes embarqués</li>
-            <li><span class="dot"></span>Consultants en automatisation des processus</li>
+            <li><span class="dot"></span><span data-i18n="career.li1">Développeurs full-stack &amp; mobile</span></li>
+            <li><span class="dot"></span><span data-i18n="career.li2">Architectes logiciels</span></li>
+            <li><span class="dot"></span><span data-i18n="career.li3">Data scientists &amp; ingénieurs IA</span></li>
+            <li><span class="dot"></span><span data-i18n="career.li4">Experts IoT &amp; systèmes embarqués</span></li>
+            <li><span class="dot"></span><span data-i18n="career.li5">Consultants en automatisation des processus</span></li>
           </ul>
         </div>
         <div class="careers-panel">
-          <h3>Aucune offre ne vous correspond ?</h3>
-          <p>Envoyez-nous un message via le formulaire de contact avec votre parcours, vos compétences et ce qui vous anime. Nous lisons chaque message.</p>
-          <a href="#contact" class="btn btn-primary">Se présenter</a>
+          <h3 data-i18n="careers.panel.h3">Aucune offre ne vous correspond ?</h3>
+          <p data-i18n="careers.panel.p">Envoyez-nous un message via le formulaire de contact avec votre parcours, vos compétences et ce qui vous anime. Nous lisons chaque message.</p>
+          <a href="#contact" class="btn btn-primary" data-i18n="careers.panel.btn">Se présenter</a>
         </div>
       </div>
     </div>
@@ -377,12 +381,12 @@
   <section class="contact" id="contact">
     <div class="wrap contact-grid">
       <div class="contact-info" data-reveal>
-        <h2 style="font-size:32px; font-weight:600;">Un projet en tête ? Une question ?</h2>
-        <p class="contact-lede">Parlons-en. Nous sommes là pour vous accompagner.</p>
+        <h2 style="font-size:32px; font-weight:600;" data-i18n="contact.h2">Un projet en tête ? Une question ?</h2>
+        <p class="contact-lede" data-i18n="contact.lede">Parlons-en. Nous sommes là pour vous accompagner.</p>
         <dl>
-          <dt>Email</dt>
+          <dt data-i18n="contact.dt.email">Email</dt>
           <dd><a href="mailto:contact@neotech-consulting.com">contact@neotech-consulting.com</a></dd>
-          <dt>Réseaux</dt>
+          <dt data-i18n="contact.dt.social">Réseaux</dt>
           <dd>
             <div class="social-row">
               <a href="#" aria-label="LinkedIn">in</a>
@@ -393,16 +397,16 @@
         </dl>
         <div class="faq">
           <div class="faq-item">
-            <h4>Quels sont vos délais d'intervention ?</h4>
-            <p>Cela dépend de la nature du projet, mais nous revenons vers vous sous quelques jours pour un premier échange.</p>
+            <h4 data-i18n="faq1.q">Quels sont vos délais d'intervention ?</h4>
+            <p data-i18n="faq1.a">Cela dépend de la nature du projet, mais nous revenons vers vous sous quelques jours pour un premier échange.</p>
           </div>
           <div class="faq-item">
-            <h4>Comment se passe un premier échange ?</h4>
-            <p>Un appel ou une visio de 30 à 45 minutes pour comprendre votre besoin, sans engagement de votre part.</p>
+            <h4 data-i18n="faq2.q">Comment se passe un premier échange ?</h4>
+            <p data-i18n="faq2.a">Un appel ou une visio de 30 à 45 minutes pour comprendre votre besoin, sans engagement de votre part.</p>
           </div>
           <div class="faq-item">
-            <h4>Quels types de projets acceptez-vous ?</h4>
-            <p>Architecture logicielle, Data &amp; IA, IoT, ou conseil — que le projet soit déjà cadré ou encore à défricher.</p>
+            <h4 data-i18n="faq3.q">Quels types de projets acceptez-vous ?</h4>
+            <p data-i18n="faq3.a">Architecture logicielle, Data &amp; IA, IoT, ou conseil — que le projet soit déjà cadré ou encore à défricher.</p>
           </div>
         </div>
       </div>
@@ -410,40 +414,40 @@
         <input type="hidden" name="form-name" value="contact">
         <div class="form-row">
           <div class="field">
-            <label for="nom">Nom</label>
+            <label for="nom" data-i18n="form.label.nom">Nom</label>
             <input type="text" id="nom" name="nom" required>
           </div>
           <div class="field">
-            <label for="email">Email</label>
+            <label for="email" data-i18n="form.label.email">Email</label>
             <input type="email" id="email" name="email" required>
           </div>
         </div>
         <div class="form-row">
           <div class="field">
-            <label for="entreprise">Entreprise</label>
+            <label for="entreprise" data-i18n="form.label.entreprise">Entreprise</label>
             <input type="text" id="entreprise" name="entreprise">
           </div>
           <div class="field">
-            <label for="telephone">Téléphone</label>
+            <label for="telephone" data-i18n="form.label.telephone">Téléphone</label>
             <input type="tel" id="telephone" name="telephone">
           </div>
         </div>
         <div class="field">
-          <label for="typeProjet">Type de projet</label>
+          <label for="typeProjet" data-i18n="form.label.type">Type de projet</label>
           <select id="typeProjet" name="typeProjet">
-            <option value="architecture">Architecture &amp; Développement</option>
-            <option value="donnees-ia">Données &amp; IA</option>
-            <option value="iot">Ingénierie IoT</option>
-            <option value="conseil">Conseil &amp; Stratégie</option>
-            <option value="autre">Autre</option>
+            <option value="architecture" data-i18n="form.opt.architecture">Architecture &amp; Développement</option>
+            <option value="donnees-ia" data-i18n="form.opt.donnees">Données &amp; IA</option>
+            <option value="iot" data-i18n="form.opt.iot">Ingénierie IoT</option>
+            <option value="conseil" data-i18n="form.opt.conseil">Conseil &amp; Stratégie</option>
+            <option value="autre" data-i18n="form.opt.autre">Autre</option>
           </select>
         </div>
         <div class="field">
-          <label for="message">Message</label>
+          <label for="message" data-i18n="form.label.message">Message</label>
           <textarea id="message" name="message" rows="5" required></textarea>
         </div>
-        <button type="submit" class="btn btn-primary">Envoyer le message</button>
-        <span class="form-status" id="formStatus">Message envoyé — nous revenons vers vous rapidement.</span>
+        <button type="submit" class="btn btn-primary" data-i18n="form.submit">Envoyer le message</button>
+        <span class="form-status" id="formStatus" data-i18n="form.status">Message envoyé — nous revenons vers vous rapidement.</span>
       </form>
     </div>
   </section>
@@ -458,17 +462,17 @@
         <span class="footer-brand-text">Neotech-Consulting</span>
       </div>
       <nav class="footer-nav">
-        <a href="#accueil">Accueil</a>
-        <a href="#approche">Notre approche</a>
-        <a href="#projets">Projets</a>
-        <a href="#equipe">Équipe</a>
-        <a href="#ressources">Ressources</a>
-        <a href="#carrieres">Carrières</a>
-        <a href="#contact">Contact</a>
+        <a href="#accueil" data-i18n="nav.accueil">Accueil</a>
+        <a href="#approche" data-i18n="nav.approche">Notre approche</a>
+        <a href="#projets" data-i18n="nav.projets">Projets</a>
+        <a href="#equipe" data-i18n="nav.equipe">Équipe</a>
+        <a href="#ressources" data-i18n="nav.ressources">Ressources</a>
+        <a href="#carrieres" data-i18n="nav.carrieres">Carrières</a>
+        <a href="#contact" data-i18n="nav.contact">Contact</a>
       </nav>
     </div>
     <div class="footer-bottom">
-      <span>© 2026 Neotech-Consulting. Tous droits réservés.</span>
+      <span data-i18n="footer.copyright">© 2026 Neotech-Consulting. Tous droits réservés.</span>
       <div class="social-row">
         <a href="#" aria-label="LinkedIn">in</a>
         <a href="#" aria-label="GitHub">gh</a>

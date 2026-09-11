@@ -132,6 +132,31 @@
   .menu-toggle{display:none; background:none; border:none; cursor:pointer; padding:8px;}
   .menu-toggle span{display:block; width:22px; height:2px; background:var(--navy-950); margin:5px 0;}
 
+  /* ---------- language switch ---------- */
+  .lang-switch{
+    display:flex; align-items:center; gap:2px;
+    background:var(--paper); border:1px solid var(--line); border-radius:999px;
+    padding:3px; flex-shrink:0;
+  }
+  .lang-switch button{
+    appearance:none; border:none; background:transparent; cursor:pointer;
+    font-family:'IBM Plex Mono', monospace; font-size:12px; font-weight:600; letter-spacing:.02em;
+    color:var(--slate); padding:6px 12px; border-radius:999px;
+    transition:background .2s ease, color .2s ease;
+  }
+  .lang-switch button.is-active{background:var(--navy-950); color:var(--white);}
+  .lang-switch button:not(.is-active):hover{color:var(--navy-950);}
+
+  .lang-switch{display:flex; align-items:center; gap:2px; background:var(--paper); border:1px solid var(--line); border-radius:999px; padding:3px; margin-right:4px;}
+  .lang-btn{
+    appearance:none; border:none; background:transparent; cursor:pointer;
+    font-family:'IBM Plex Mono', monospace; font-size:12px; font-weight:600; letter-spacing:.03em;
+    color:var(--slate); padding:6px 11px; border-radius:999px; line-height:1;
+    transition:background .2s ease, color .2s ease;
+  }
+  .lang-btn:hover{color:var(--navy-950);}
+  .lang-btn.is-active{background:var(--navy-950); color:var(--white);}
+
   /* ---------- hero ---------- */
   /* A single ambient WebGL backdrop is the hero's one bold gesture — everything else
      in the page is deliberately quieter so this stays the memorable moment. */
@@ -398,6 +423,7 @@
     nav.links.is-open a{padding:12px 10px; border-radius:8px;}
     nav.links.is-open a:hover{background:var(--paper);}
     .menu-toggle{display:block;}
+    .lang-switch button{padding:6px 9px;}
     .hero{padding:130px 0 90px; min-height:0;}
     .team-grid, .contact-grid, .careers-grid{grid-template-columns:1fr;}
     .services-list .service-row{grid-template-columns:1fr; gap:14px;}
@@ -411,4 +437,8 @@
     section{padding:72px 0;}
     .project-filters{margin:-24px 0 36px; overflow-x:auto; flex-wrap:nowrap; padding-bottom:4px;}
     .project-filters button{white-space:nowrap;}
+  }
+
+  @media (max-width: 480px){
+    .brand-text small{display:none;}
   }
