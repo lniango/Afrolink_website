@@ -64,36 +64,39 @@
       '  gl_Position = vec4(a_position, 0.0, 1.0);' +
       '}';
 
-    // Palette tuned to the Neotech-Consulting brand: deep navy base, warm orange accents.
-    // Kept deliberately restrained (slow drift, low contrast) so it reads as ambient
-    // texture rather than a flashy centerpiece — a calmer backdrop for an enterprise
-    // consulting audience.
+    // Palette tuned to the Neotech-Consulting brand: deep navy base, warm orange glow.
+    // Previous version (a thin-ring fractal tunnel) averaged ~13% luminance across the
+    // hero — effectively invisible to most viewers. This one fills the frame with soft,
+    // slow-moving gradient light so it reads clearly at a glance while staying calm
+    // enough for an enterprise consulting audience (no hard edges, no strobing).
     var fs = 'precision highp float;' +
       'varying vec2 v_texCoord;' +
       'uniform float u_time;' +
       'uniform vec2 u_resolution;' +
       'uniform vec2 u_mouse;' +
-      'vec3 palette(float t){' +
-      '  vec3 a = vec3(0.06, 0.14, 0.27);' +
-      '  vec3 b = vec3(0.80, 0.34, 0.05);' +
-      '  vec3 c = vec3(0.20, 0.24, 0.32);' +
-      '  return a + b * cos(6.28318 * (c * t + u_time * 0.025));' +
+      'float blob(vec2 uv, vec2 center, float radius){' +
+      '  float d = length(uv - center) / radius;' +
+      '  return exp(-d * d * 1.6);' +
       '}' +
       'void main(){' +
-      '  vec2 uv = (gl_FragCoord.xy * 2.0 - u_resolution.xy) / min(u_resolution.y, u_resolution.x);' +
-      '  vec2 mouseUv = (u_mouse * 2.0 - u_resolution.xy) / min(u_resolution.y, u_resolution.x);' +
-      '  vec2 uv0 = uv + (mouseUv * 0.045);' +
-      '  vec3 finalColor = vec3(0.0);' +
-      '  for(float i = 0.0; i < 4.0; i++){' +
-      '    uv = fract(uv * 1.5) - 0.5;' +
-      '    float d = length(uv) * exp(-length(uv0));' +
-      '    vec3 col = palette(length(uv0) + i * 0.4 + u_time * 0.2);' +
-      '    d = sin(d * 8.0 + u_time * 0.4) / 8.0;' +
-      '    d = abs(d);' +
-      '    d = pow(0.012 / d, 1.2);' +
-      '    finalColor += col * d;' +
-      '  }' +
-      '  gl_FragColor = vec4(finalColor * 0.26, 1.0);' +
+      '  vec2 aspect = vec2(u_resolution.x / u_resolution.y, 1.0);' +
+      '  vec2 uv = (gl_FragCoord.xy / u_resolution.xy - 0.5) * aspect * 2.0;' +
+      '  vec2 mouseUv = (u_mouse / u_resolution.xy - 0.5) * aspect * 2.0;' +
+      '  float t = u_time * 0.12;' +
+      '  vec3 navyBase = vec3(0.031, 0.102, 0.20);' +
+      '  vec3 navyGlow = vec3(0.09, 0.22, 0.40);' +
+      '  vec3 orangeGlow = vec3(0.91, 0.44, 0.14);' +
+      '  vec2 c1 = vec2(0.75, 0.30) + vec2(sin(t * 0.8), cos(t * 0.6)) * 0.35 + mouseUv * 0.12;' +
+      '  vec2 c2 = vec2(-0.55, -0.25) + vec2(cos(t * 0.5), sin(t * 0.7)) * 0.4 + mouseUv * 0.08;' +
+      '  vec2 c3 = vec2(0.15, -0.55) + vec2(sin(t * 0.4 + 1.5), cos(t * 0.9)) * 0.45 + mouseUv * 0.05;' +
+      '  float b1 = blob(uv, c1, 1.05);' +
+      '  float b2 = blob(uv, c2, 1.25);' +
+      '  float b3 = blob(uv, c3, 0.95);' +
+      '  vec3 col = navyBase;' +
+      '  col += navyGlow * (b2 * 0.85 + b3 * 0.55);' +
+      '  col += orangeGlow * b1 * 0.85;' +
+      '  col += orangeGlow * b3 * 0.18;' +
+      '  gl_FragColor = vec4(col, 1.0);' +
       '}';
 
     function compile(type, src){
