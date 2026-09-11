@@ -1,23 +1,4 @@
-// Assemble grid for hero
-  (function(){
-    var grid = document.getElementById('assembleGrid');
-    var total = 64;
-    var colorFor = function(i){
-      var r = Math.random();
-      if(r < 0.14) return 'orange';
-      if(r < 0.5) return 'navy';
-      return 'light';
-    };
-    for(var i=0;i<total;i++){
-      var cell = document.createElement('div');
-      cell.className = 'cell ' + colorFor(i);
-      var delay = (Math.random()*0.9).toFixed(2);
-      cell.style.animationDelay = delay + 's';
-      grid.appendChild(cell);
-    }
-  })();
-
-  // Reveal on scroll
+// Reveal on scroll
   (function(){
     var els = document.querySelectorAll('[data-reveal], .pixel-mark');
     if(!('IntersectionObserver' in window)){
@@ -35,14 +16,21 @@
     els.forEach(function(el){ io.observe(el); });
   })();
 
-  // Contact form (static demo, no backend)
+  // Contact form: works with Netlify Forms when deployed there; falls back to a
+  // local confirmation message when opened as a static file or hosted elsewhere.
   (function(){
     var form = document.getElementById('contactForm');
     var status = document.getElementById('formStatus');
+    if(!form) return;
     form.addEventListener('submit', function(e){
-      e.preventDefault();
-      status.classList.add('show');
-      form.reset();
+      // On Netlify, letting the native POST happen (with a redirect) is more robust,
+      // but a same-page confirmation keeps things simple for other hosts too.
+      var isNetlify = window.location.hostname.indexOf('netlify') !== -1;
+      if(!isNetlify){
+        e.preventDefault();
+        status.classList.add('show');
+        form.reset();
+      }
     });
   })();
 
@@ -77,6 +65,9 @@
       '}';
 
     // Palette tuned to the Neotech-Consulting brand: deep navy base, warm orange accents.
+    // Kept deliberately restrained (slow drift, low contrast) so it reads as ambient
+    // texture rather than a flashy centerpiece — a calmer backdrop for an enterprise
+    // consulting audience.
     var fs = 'precision highp float;' +
       'varying vec2 v_texCoord;' +
       'uniform float u_time;' +
@@ -86,23 +77,23 @@
       '  vec3 a = vec3(0.06, 0.14, 0.27);' +
       '  vec3 b = vec3(0.80, 0.34, 0.05);' +
       '  vec3 c = vec3(0.20, 0.24, 0.32);' +
-      '  return a + b * cos(6.28318 * (c * t + u_time * 0.04));' +
+      '  return a + b * cos(6.28318 * (c * t + u_time * 0.025));' +
       '}' +
       'void main(){' +
       '  vec2 uv = (gl_FragCoord.xy * 2.0 - u_resolution.xy) / min(u_resolution.y, u_resolution.x);' +
       '  vec2 mouseUv = (u_mouse * 2.0 - u_resolution.xy) / min(u_resolution.y, u_resolution.x);' +
-      '  vec2 uv0 = uv + (mouseUv * 0.06);' +
+      '  vec2 uv0 = uv + (mouseUv * 0.045);' +
       '  vec3 finalColor = vec3(0.0);' +
       '  for(float i = 0.0; i < 4.0; i++){' +
       '    uv = fract(uv * 1.5) - 0.5;' +
       '    float d = length(uv) * exp(-length(uv0));' +
-      '    vec3 col = palette(length(uv0) + i * 0.4 + u_time * 0.3);' +
-      '    d = sin(d * 8.0 + u_time * 0.6) / 8.0;' +
+      '    vec3 col = palette(length(uv0) + i * 0.4 + u_time * 0.2);' +
+      '    d = sin(d * 8.0 + u_time * 0.4) / 8.0;' +
       '    d = abs(d);' +
       '    d = pow(0.012 / d, 1.2);' +
       '    finalColor += col * d;' +
       '  }' +
-      '  gl_FragColor = vec4(finalColor * 0.28, 1.0);' +
+      '  gl_FragColor = vec4(finalColor * 0.26, 1.0);' +
       '}';
 
     function compile(type, src){
