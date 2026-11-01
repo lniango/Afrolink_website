@@ -57,66 +57,7 @@ var translations = {
   'portfolio.h2': { fr: 'Découvrez comment nous transformons les idées en solutions concrètes', en: 'See how we turn ideas into real-world solutions' },
   'portfolio.p': { fr: 'Chaque projet part d\u2019un problème réel identifié sur le terrain. Voici ceux sur lesquels nous travaillons actuellement, regroupés par thématique.', en: 'Every project starts from a real problem identified in the field. Here\u2019s what we\u2019re currently working on, grouped by theme.' },
 
-  'filter.all': { fr: 'Tous les projets', en: 'All projects' },
-  'filter.logistique': { fr: 'Logistique', en: 'Logistics' },
-  'filter.formation': { fr: 'Formation', en: 'Training' },
-  'filter.ia': { fr: 'IA & automatisation', en: 'AI & automation' },
-  'filter.fabrication': { fr: 'Fabrication', en: 'Manufacturing' },
-  'filter.agritech': { fr: 'AgriTech', en: 'AgriTech' },
-
-  'theme.logistique': { fr: 'Logistique & Services de proximité', en: 'Logistics & Local services' },
-  'theme.formation': { fr: 'Formation', en: 'Training' },
-  'theme.ia': { fr: 'Intelligence artificielle & automatisation', en: 'Artificial intelligence & automation' },
-  'theme.fabrication': { fr: 'Fabrication & design', en: 'Manufacturing & design' },
-  'theme.agritech': { fr: 'AgriTech', en: 'AgriTech' },
-
-  'status.mvp': { fr: 'Prototype fonctionnel', en: 'Working prototype' },
-  'status.dev': { fr: 'En développement', en: 'In development' },
-  'status.conception': { fr: 'En conception', en: 'In design' },
-  'status.recherche': { fr: 'Recherche de financement', en: 'Seeking funding' },
-
-  'ps.label.problem': { fr: 'Le problème', en: 'The problem' },
-  'ps.label.solution': { fr: 'Notre solution', en: 'Our solution' },
-  'project.link.github': { fr: 'Consulter le code sur GitHub', en: 'View the code on GitHub' },
-
-  'afrolink.tagline': { fr: 'La logistique sans frontières.', en: 'Logistics without borders.' },
-  'afrolink.problem': { fr: "Les entreprises et les particuliers ont du mal à trouver des livreurs fiables entre l'Afrique et l'étranger, avec peu de visibilité sur l'acheminement.", en: 'Businesses and individuals struggle to find reliable couriers between Africa and abroad, with little visibility into the shipment.' },
-  'afrolink.solution': { fr: 'Une plateforme intelligente de mise en relation, avec suivi en temps réel et gestion optimisée des flux.', en: 'A smart matchmaking platform with real-time tracking and optimised flow management.' },
-  'tag.geoapi': { fr: 'API de géolocalisation', en: 'Geolocation API' },
-
-  'servilink.tagline': { fr: 'Le quotidien des résidences, simplifié.', en: 'Everyday residential life, simplified.' },
-  'servilink.problem': { fr: 'Les résidences et copropriétés jonglent avec de multiples prestataires dispersés pour les services du quotidien.', en: 'Residences and co-ops juggle multiple scattered providers for everyday services.' },
-  'servilink.solution': { fr: 'Une plateforme unique pour connecter résidences et prestataires : petit-déjeuner, chauffeurs, conciergerie.', en: 'A single platform connecting residences and providers: breakfast, drivers, concierge.' },
-
-  'edulink.tagline': { fr: "Apprendre, où que l'on soit.", en: 'Learning, wherever you are.' },
-  'edulink.problem': { fr: "Trouver une formation en ligne fiable et adaptée à son niveau reste un parcours confus pour beaucoup d'apprenants.", en: 'Finding a reliable online course suited to your level remains a confusing journey for many learners.' },
-  'edulink.solution': { fr: 'Une plateforme qui met en relation organismes de formation et apprenants, avec suivi pédagogique et certification.', en: 'A platform connecting training providers and learners, with progress tracking and certification.' },
-
-  'iagents.tagline': { fr: 'Des agents IA qui travaillent vraiment pour vous.', en: 'AI agents that actually work for you.' },
-  'iagents.problem': { fr: "Particuliers et entreprises passent un temps précieux sur des tâches répétitives d'information et de support.", en: 'Individuals and businesses spend valuable time on repetitive information and support tasks.' },
-  'iagents.solution': { fr: "Une suite d'agents IA spécialisés : assistants conversationnels et assistants documentaires, sur mesure.", en: 'A suite of specialised AI agents: custom conversational assistants and document assistants.' },
-
-  'autopro.tagline': { fr: 'Moins de tâches, plus de valeur.', en: 'Fewer tasks, more value.' },
-  'autopro.problem': { fr: 'Les équipes RH et comptables perdent un temps considérable sur des processus manuels et répétitifs.', en: 'HR and finance teams lose considerable time on manual, repetitive processes.' },
-  'autopro.solution': { fr: "Des solutions d'automatisation des processus d'entreprise, pour libérer du temps aux équipes.", en: 'Business process automation solutions that free up time for teams.' },
-  'tag.internalapis': { fr: 'APIs internes', en: 'Internal APIs' },
-
-  'light3d.tagline': { fr: 'Votre lampe, imaginée par vous.', en: 'Your lamp, designed by you.' },
-  'light3d.problem': { fr: "La personnalisation d'objets du quotidien reste réservée à des designers ou des budgets élevés.", en: 'Customising everyday objects remains reserved for designers or large budgets.' },
-  'light3d.solution': { fr: 'Une plateforme de configuration et de génération de lampes personnalisées, fabriquées à la demande en impression 3D.', en: 'A configurator that generates custom lamps, made to order with 3D printing.' },
-  'tag.print3d': { fr: 'Impression 3D', en: '3D printing' },
-
-  'agritech.tagline': { fr: 'Cultiver avec précision.', en: 'Growing with precision.' },
-  'agritech.problem': { fr: 'Les exploitants agricoles manquent souvent de visibilité en temps réel sur l\u2019état de leurs cultures et de leur élevage.', en: 'Farmers often lack real-time visibility into the state of their crops and livestock.' },
-  'agritech.solution': { fr: 'Des capteurs terrain connectés et des tableaux de bord temps réel pour une agriculture de précision.', en: 'Connected field sensors and real-time dashboards for precision farming.' },
-  'tag.iotsensors': { fr: 'Capteurs IoT', en: 'IoT sensors' },
-
-  'farmlink.tagline': { fr: "Du champ à l'assiette, sans détour.", en: 'From field to plate, no detour.' },
-  'farmlink.problem': { fr: 'Les producteurs agricoles ont un accès limité aux clients directs, et les marges disparaissent dans les intermédiaires.', en: 'Farmers have limited access to direct customers, and margins disappear into middlemen.' },
-  'farmlink.solution': { fr: 'Une plateforme de mise en relation directe entre producteurs et clients, pour des circuits courts et plus équitables.', en: 'A platform connecting producers directly with customers, for shorter, fairer supply chains.' },
-  'tag.geoloc': { fr: 'Géolocalisation', en: 'Geolocation' },
-
-  'trust.statement': { fr: "Neotech-Consulting est une structure jeune. Nous préférons vous montrer nos huit projets en cours plutôt que des témoignages inventés — cette section accueillera les retours de nos premiers clients dès qu'ils existeront.", en: 'Neotech-Consulting is a young company. We\u2019d rather show you our eight active projects than invented testimonials — this section will host feedback from our first clients as soon as it exists.' },
+  'portfolio.loading': { fr: 'Chargement du portfolio…', en: 'Loading the portfolio…' },
 
   'team.welcome.p1': { fr: 'Nous sommes une équipe de passionnés, réunis par une même ambition : construire des solutions technologiques qui ont du sens.', en: 'We are a team of enthusiasts, united by one ambition: building technology solutions that matter.' },
   'team.welcome.p2': { fr: "Architectes, développeurs, data scientists, experts IoT... nous croyons que la diversité des talents est notre plus grande force. Chaque projet que nous menons est une pièce d'un même chantier, pensé pour des besoins réels — et nous gardons la porte ouverte à qui veut construire avec nous.", en: 'Architects, developers, data scientists, IoT experts... we believe diversity of talent is our greatest strength. Every project we run is one piece of the same build, shaped by real needs — and the door stays open to anyone who wants to build with us.' },
@@ -234,6 +175,7 @@ var translations = {
         : (isOpen ? 'Close menu' : 'Open menu'));
     }
     saveLang(lang);
+    document.dispatchEvent(new CustomEvent('neotech:langchange', { detail: { lang: lang } }));
   }
 
   if(switchEl){
@@ -427,25 +369,7 @@ var translations = {
     document.addEventListener('keydown', function(event){ if(event.key === 'Escape') closeMenu(); });
   })();
 
-  // Portfolio filters: keep the long portfolio easy to browse without hiding content by default.
-  (function(){
-    var controls = document.querySelector('[data-project-filters]');
-    if(!controls) return;
-    var groups = document.querySelectorAll('[data-project-theme]');
-    controls.querySelectorAll('button').forEach(function(button){
-      button.addEventListener('click', function(){
-        var filter = button.dataset.filter;
-        controls.querySelectorAll('button').forEach(function(control){
-          var active = control === button;
-          control.classList.toggle('is-active', active);
-          control.setAttribute('aria-pressed', String(active));
-        });
-        groups.forEach(function(group){
-          group.classList.toggle('is-hidden', filter !== 'all' && group.dataset.projectTheme !== filter);
-        });
-      });
-    });
-  })();
+  // Portfolio filters are wired in portfolio.js after the dynamic catalogue is rendered.
 
   // FAQ accordions are enhanced in JavaScript so the readable static content remains
   // available without it. The generated <button> inherits the heading's data-i18n key

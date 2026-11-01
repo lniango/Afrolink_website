@@ -119,157 +119,17 @@
         <p data-i18n="portfolio.p">Chaque projet part d'un problème réel identifié sur le terrain. Voici ceux sur lesquels nous travaillons actuellement, regroupés par thématique.</p>
       </div>
 
-      <div class="project-filters" data-project-filters aria-label="Filtrer les projets par domaine">
-        <button type="button" class="is-active" data-filter="all" aria-pressed="true" data-i18n="filter.all">Tous les projets</button>
-        <button type="button" data-filter="logistique" aria-pressed="false" data-i18n="filter.logistique">Logistique</button>
-        <button type="button" data-filter="formation" aria-pressed="false" data-i18n="filter.formation">Formation</button>
-        <button type="button" data-filter="ia" aria-pressed="false" data-i18n="filter.ia">IA &amp; automatisation</button>
-        <button type="button" data-filter="fabrication" aria-pressed="false" data-i18n="filter.fabrication">Fabrication</button>
-        <button type="button" data-filter="agritech" aria-pressed="false" data-i18n="filter.agritech">AgriTech</button>
+      <div class="project-filters" data-project-filters aria-label="Filtrer les projets par domaine"></div>
+      <div data-portfolio-root>
+        <p class="portfolio-loading" data-i18n="portfolio.loading">Chargement du portfolio…</p>
       </div>
-
-      <!-- Logistique & Services -->
-      <div class="theme-group" data-reveal data-project-theme="logistique">
-        <div class="theme-title" data-i18n="theme.logistique">Logistique &amp; Services de proximité</div>
-        <div class="projects-grid">
-          <div class="project-card">
-            <div class="project-top">
-              <h3>Afrolink Delivery</h3>
-              <span class="status status-mvp" data-i18n="status.mvp">Prototype fonctionnel</span>
-            </div>
-            <p class="tagline" data-i18n="afrolink.tagline">La logistique sans frontières.</p>
-            <div class="problem-solution">
-              <p><span class="ps-label" data-i18n="ps.label.problem">Le problème</span><span data-i18n="afrolink.problem">Les entreprises et les particuliers ont du mal à trouver des livreurs fiables entre l'Afrique et l'étranger, avec peu de visibilité sur l'acheminement.</span></p>
-              <p><span class="ps-label" data-i18n="ps.label.solution">Notre solution</span><span data-i18n="afrolink.solution">Une plateforme intelligente de mise en relation, avec suivi en temps réel et gestion optimisée des flux.</span></p>
-            </div>
-            <div class="tech-tags"><span>React Native</span><span>Node.js</span><span data-i18n="tag.geoapi">API de géolocalisation</span></div>
-            <a class="project-link" href="https://github.com/LeKani/Afrolink/tree/master" target="_blank" rel="noopener" data-i18n="project.link.github">Consulter le code sur GitHub</a>
-          </div>
-
-          <div class="project-card">
-            <div class="project-top">
-              <h3>ServiLink</h3>
-              <span class="status status-conception" data-i18n="status.conception">En conception</span>
-            </div>
-            <p class="tagline" data-i18n="servilink.tagline">Le quotidien des résidences, simplifié.</p>
-            <div class="problem-solution">
-              <p><span class="ps-label" data-i18n="ps.label.problem">Le problème</span><span data-i18n="servilink.problem">Les résidences et copropriétés jonglent avec de multiples prestataires dispersés pour les services du quotidien.</span></p>
-              <p><span class="ps-label" data-i18n="ps.label.solution">Notre solution</span><span data-i18n="servilink.solution">Une plateforme unique pour connecter résidences et prestataires : petit-déjeuner, chauffeurs, conciergerie.</span></p>
-            </div>
-            <div class="tech-tags"><span>React Native</span><span>Node.js</span><span>MongoDB</span></div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Formation -->
-      <div class="theme-group" data-reveal data-project-theme="formation">
-        <div class="theme-title" data-i18n="theme.formation">Formation</div>
-        <div class="projects-grid">
-          <div class="project-card">
-            <div class="project-top">
-              <h3>EduLink</h3>
-              <span class="status status-dev" data-i18n="status.dev">En développement</span>
-            </div>
-            <p class="tagline" data-i18n="edulink.tagline">Apprendre, où que l'on soit.</p>
-            <div class="problem-solution">
-              <p><span class="ps-label" data-i18n="ps.label.problem">Le problème</span><span data-i18n="edulink.problem">Trouver une formation en ligne fiable et adaptée à son niveau reste un parcours confus pour beaucoup d'apprenants.</span></p>
-              <p><span class="ps-label" data-i18n="ps.label.solution">Notre solution</span><span data-i18n="edulink.solution">Une plateforme qui met en relation organismes de formation et apprenants, avec suivi pédagogique et certification.</span></p>
-            </div>
-            <div class="tech-tags"><span>Next.js</span><span>Django</span><span>PostgreSQL</span></div>
-          </div>
-        </div>
-      </div>
-
-      <!-- IA & Automatisation -->
-      <div class="theme-group" data-reveal data-project-theme="ia">
-        <div class="theme-title" data-i18n="theme.ia">Intelligence artificielle &amp; automatisation</div>
-        <div class="projects-grid">
-          <div class="project-card">
-            <div class="project-top">
-              <h3>IAgents</h3>
-              <span class="status status-dev" data-i18n="status.dev">En développement</span>
-            </div>
-            <p class="tagline" data-i18n="iagents.tagline">Des agents IA qui travaillent vraiment pour vous.</p>
-            <div class="problem-solution">
-              <p><span class="ps-label" data-i18n="ps.label.problem">Le problème</span><span data-i18n="iagents.problem">Particuliers et entreprises passent un temps précieux sur des tâches répétitives d'information et de support.</span></p>
-              <p><span class="ps-label" data-i18n="ps.label.solution">Notre solution</span><span data-i18n="iagents.solution">Une suite d'agents IA spécialisés : assistants conversationnels et assistants documentaires, sur mesure.</span></p>
-            </div>
-            <div class="tech-tags"><span>Python</span><span>LangChain</span><span>Claude API</span><span>Vector DB</span></div>
-          </div>
-
-          <div class="project-card">
-            <div class="project-top">
-              <h3>Automation Pro</h3>
-              <span class="status status-recherche" data-i18n="status.recherche">Recherche de financement</span>
-            </div>
-            <p class="tagline" data-i18n="autopro.tagline">Moins de tâches, plus de valeur.</p>
-            <div class="problem-solution">
-              <p><span class="ps-label" data-i18n="ps.label.problem">Le problème</span><span data-i18n="autopro.problem">Les équipes RH et comptables perdent un temps considérable sur des processus manuels et répétitifs.</span></p>
-              <p><span class="ps-label" data-i18n="ps.label.solution">Notre solution</span><span data-i18n="autopro.solution">Des solutions d'automatisation des processus d'entreprise, pour libérer du temps aux équipes.</span></p>
-            </div>
-            <div class="tech-tags"><span>Python</span><span>RPA</span><span>n8n</span><span data-i18n="tag.internalapis">APIs internes</span></div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Fabrication -->
-      <div class="theme-group" data-reveal data-project-theme="fabrication">
-        <div class="theme-title" data-i18n="theme.fabrication">Fabrication &amp; design</div>
-        <div class="projects-grid">
-          <div class="project-card">
-            <div class="project-top">
-              <h3>3D-Light</h3>
-              <span class="status status-conception" data-i18n="status.conception">En conception</span>
-            </div>
-            <p class="tagline" data-i18n="light3d.tagline">Votre lampe, imaginée par vous.</p>
-            <div class="problem-solution">
-              <p><span class="ps-label" data-i18n="ps.label.problem">Le problème</span><span data-i18n="light3d.problem">La personnalisation d'objets du quotidien reste réservée à des designers ou des budgets élevés.</span></p>
-              <p><span class="ps-label" data-i18n="ps.label.solution">Notre solution</span><span data-i18n="light3d.solution">Une plateforme de configuration et de génération de lampes personnalisées, fabriquées à la demande en impression 3D.</span></p>
-            </div>
-            <div class="tech-tags"><span>Three.js</span><span>React</span><span data-i18n="tag.print3d">Impression 3D</span></div>
-          </div>
-        </div>
-      </div>
-
-      <!-- AgriTech -->
-      <div class="theme-group" data-reveal data-project-theme="agritech">
-        <div class="theme-title" data-i18n="theme.agritech">AgriTech</div>
-        <div class="projects-grid">
-          <div class="project-card">
-            <div class="project-top">
-              <h3>AgriTech Connect</h3>
-              <span class="status status-recherche" data-i18n="status.recherche">Recherche de financement</span>
-            </div>
-            <p class="tagline" data-i18n="agritech.tagline">Cultiver avec précision.</p>
-            <div class="problem-solution">
-              <p><span class="ps-label" data-i18n="ps.label.problem">Le problème</span><span data-i18n="agritech.problem">Les exploitants agricoles manquent souvent de visibilité en temps réel sur l'état de leurs cultures et de leur élevage.</span></p>
-              <p><span class="ps-label" data-i18n="ps.label.solution">Notre solution</span><span data-i18n="agritech.solution">Des capteurs terrain connectés et des tableaux de bord temps réel pour une agriculture de précision.</span></p>
-            </div>
-            <div class="tech-tags"><span data-i18n="tag.iotsensors">Capteurs IoT</span><span>MQTT</span><span>Python</span></div>
-          </div>
-
-          <div class="project-card">
-            <div class="project-top">
-              <h3>FarmLink</h3>
-              <span class="status status-conception" data-i18n="status.conception">En conception</span>
-            </div>
-            <p class="tagline" data-i18n="farmlink.tagline">Du champ à l'assiette, sans détour.</p>
-            <div class="problem-solution">
-              <p><span class="ps-label" data-i18n="ps.label.problem">Le problème</span><span data-i18n="farmlink.problem">Les producteurs agricoles ont un accès limité aux clients directs, et les marges disparaissent dans les intermédiaires.</span></p>
-              <p><span class="ps-label" data-i18n="ps.label.solution">Notre solution</span><span data-i18n="farmlink.solution">Une plateforme de mise en relation directe entre producteurs et clients, pour des circuits courts et plus équitables.</span></p>
-            </div>
-            <div class="tech-tags"><span>React</span><span>Node.js</span><span data-i18n="tag.geoloc">Géolocalisation</span></div>
-          </div>
-        </div>
-      </div>
-
     </div>
   </section>
 
   <!-- CONFIANCE / PREUVE SOCIALE -->
   <section class="trust">
     <div class="wrap">
-      <p class="trust-statement" data-reveal data-i18n="trust.statement">Neotech-Consulting est une structure jeune. Nous préférons vous montrer nos huit projets en cours plutôt que des témoignages inventés — cette section accueillera les retours de nos premiers clients dès qu'ils existeront.</p>
+      <p class="trust-statement" data-reveal data-trust-statement>Neotech-Consulting est une structure jeune. Nous préférons vous montrer nos projets en cours plutôt que des témoignages inventés — cette section accueillera les retours de nos premiers clients dès qu'ils existeront.</p>
     </div>
   </section>
 
@@ -483,6 +343,7 @@
 </footer>
 
 <script src="script.js"></script>
+<script src="portfolio.js"></script>
 
 </body>
 </html>

@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admin portfolio — Neotech-Consulting</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../styles.css">
+<link rel="stylesheet" href="admin.css">
+</head>
+<body class="admin-body">
+
+  <div id="loginScreen" class="admin-login">
+    <form id="loginForm" class="admin-login-card" autocomplete="on">
+      <a class="admin-brand" href="../index.html">
+        <img src="../images/logo.jpeg" alt="Neotech-Consulting">
+        <span>Neotech-Consulting<small>Administration</small></span>
+      </a>
+      <h1>Portfolio</h1>
+      <p>Connectez-vous pour ajouter, modifier ou retirer des projets du site.</p>
+      <label for="password">Mot de passe</label>
+      <input id="password" name="password" type="password" required autocomplete="current-password" autofocus>
+      <p id="loginError" class="admin-error" hidden>Mot de passe incorrect.</p>
+      <button type="submit" class="btn btn-primary">Se connecter</button>
+    </form>
+  </div>
+
+  <div id="appScreen" class="admin-app" hidden>
+    <header class="admin-top">
+      <div class="wrap admin-top-inner">
+        <a class="admin-brand" href="../index.html">
+          <img src="../images/logo.jpeg" alt="Neotech-Consulting">
+          <span>Neotech-Consulting<small>Administration portfolio</small></span>
+        </a>
+        <div class="admin-top-actions">
+          <button type="button" id="btnPreview" class="btn btn-ghost">Prévisualiser</button>
+          <button type="button" id="btnExport" class="btn btn-ghost">Exporter JSON</button>
+          <label class="btn btn-ghost admin-file-btn">
+            Importer JSON
+            <input id="importFile" type="file" accept="application/json,.json" hidden>
+          </label>
+          <button type="button" id="btnLogout" class="btn btn-primary">Déconnexion</button>
+        </div>
+      </div>
+    </header>
+
+    <main class="wrap admin-main">
+      <section class="admin-panel">
+        <div class="admin-panel-head">
+          <div>
+            <h1>Projets</h1>
+            <p id="projectCount">0 projet</p>
+          </div>
+          <button type="button" id="btnNewProject" class="btn btn-primary">Ajouter un projet</button>
+        </div>
+        <div id="projectList" class="admin-list"></div>
+      </section>
+
+      <section class="admin-panel" id="editorPanel" hidden>
+        <div class="admin-panel-head">
+          <div>
+            <h2 id="editorTitle">Nouveau projet</h2>
+            <p>Les champs FR et EN sont affichés selon la langue choisie sur le site public.</p>
+          </div>
+          <button type="button" id="btnCancelEdit" class="btn btn-ghost">Fermer</button>
+        </div>
+
+        <form id="projectForm" class="admin-form">
+          <input type="hidden" id="editId">
+
+          <div class="admin-grid-2">
+            <div>
+              <label for="fieldName">Nom du projet</label>
+              <input id="fieldName" required maxlength="80" placeholder="Afrolink Delivery">
+            </div>
+            <div>
+              <label for="fieldTheme">Thématique</label>
+              <select id="fieldTheme" required></select>
+            </div>
+            <div>
+              <label for="fieldStatus">Statut</label>
+              <select id="fieldStatus" required></select>
+            </div>
+            <div>
+              <label for="fieldOrder">Ordre d'affichage</label>
+              <input id="fieldOrder" type="number" min="1" step="1" value="1">
+            </div>
+          </div>
+
+          <fieldset>
+            <legend>Accroche</legend>
+            <div class="admin-grid-2">
+              <div>
+                <label for="taglineFr">Français</label>
+                <input id="taglineFr" required maxlength="120">
+              </div>
+              <div>
+                <label for="taglineEn">English</label>
+                <input id="taglineEn" required maxlength="120">
+              </div>
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>Problème</legend>
+            <div class="admin-grid-2">
+              <div>
+                <label for="problemFr">Français</label>
+                <textarea id="problemFr" rows="4" required></textarea>
+              </div>
+              <div>
+                <label for="problemEn">English</label>
+                <textarea id="problemEn" rows="4" required></textarea>
+              </div>
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>Solution</legend>
+            <div class="admin-grid-2">
+              <div>
+                <label for="solutionFr">Français</label>
+                <textarea id="solutionFr" rows="4" required></textarea>
+              </div>
+              <div>
+                <label for="solutionEn">English</label>
+                <textarea id="solutionEn" rows="4" required></textarea>
+              </div>
+            </div>
+          </fieldset>
+
+          <div class="admin-grid-2">
+            <div>
+              <label for="fieldTech">Technologies <span class="hint">(séparées par des virgules)</span></label>
+              <input id="fieldTech" placeholder="React, Node.js, PostgreSQL">
+            </div>
+            <div>
+              <label for="fieldLinkUrl">Lien (optionnel)</label>
+              <input id="fieldLinkUrl" type="url" placeholder="https://…">
+            </div>
+            <div>
+              <label for="linkLabelFr">Libellé du lien — FR</label>
+              <input id="linkLabelFr" placeholder="Consulter le code sur GitHub">
+            </div>
+            <div>
+              <label for="linkLabelEn">Link label — EN</label>
+              <input id="linkLabelEn" placeholder="View the code on GitHub">
+            </div>
+          </div>
+
+          <div class="admin-form-actions">
+            <button type="submit" class="btn btn-primary">Enregistrer</button>
+            <button type="button" id="btnDeleteProject" class="btn btn-danger" hidden>Supprimer</button>
+          </div>
+        </form>
+      </section>
+
+      <section class="admin-panel">
+        <div class="admin-panel-head">
+          <div>
+            <h2>Thématiques</h2>
+            <p>Ajoutez une thématique pour classer de nouveaux projets.</p>
+          </div>
+        </div>
+        <form id="themeForm" class="admin-form admin-theme-form">
+          <div class="admin-grid-2">
+            <div>
+              <label for="themeId">Identifiant <span class="hint">(minuscules, sans espaces)</span></label>
+              <input id="themeId" required pattern="[a-z0-9-]+" placeholder="sante">
+            </div>
+            <div>
+              <label for="themeFilterFr">Filtre FR</label>
+              <input id="themeFilterFr" required placeholder="Santé">
+            </div>
+            <div>
+              <label for="themeLabelFr">Titre de section FR</label>
+              <input id="themeLabelFr" required placeholder="Santé & bien-être">
+            </div>
+            <div>
+              <label for="themeLabelEn">Section title EN</label>
+              <input id="themeLabelEn" required placeholder="Health & wellness">
+            </div>
+            <div>
+              <label for="themeFilterEn">Filter EN</label>
+              <input id="themeFilterEn" required placeholder="Health">
+            </div>
+          </div>
+          <div class="admin-form-actions">
+            <button type="submit" class="btn btn-primary">Ajouter la thématique</button>
+          </div>
+        </form>
+        <ul id="themeList" class="admin-theme-list"></ul>
+      </section>
+
+      <aside class="admin-help">
+        <h2>Publier sur le site</h2>
+        <ol>
+          <li>Modifiez les projets ici — les changements sont sauvegardés localement dans ce navigateur.</li>
+          <li>Cliquez sur <strong>Exporter JSON</strong> pour télécharger <code>portfolio.json</code>.</li>
+          <li>Remplacez le fichier <code>data/portfolio.json</code> du dépôt par ce fichier, puis déployez.</li>
+          <li><strong>Prévisualiser</strong> ouvre le site avec votre brouillon (onglet de session).</li>
+        </ol>
+        <p class="hint">Mot de passe par défaut : <code>neotech-admin</code> — changez le hash dans <code>admin/admin.js</code> avant la mise en production.</p>
+      </aside>
+    </main>
+  </div>
+
+<script src="admin.js"></script>
+</body>
+</html>

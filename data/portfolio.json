@@ -1,0 +1,301 @@
+{
+  "themes": [
+    {
+      "id": "logistique",
+      "label": {
+        "fr": "Logistique & Services de proximité",
+        "en": "Logistics & Local services"
+      },
+      "filterLabel": {
+        "fr": "Logistique",
+        "en": "Logistics"
+      }
+    },
+    {
+      "id": "formation",
+      "label": {
+        "fr": "Formation",
+        "en": "Training"
+      },
+      "filterLabel": {
+        "fr": "Formation",
+        "en": "Training"
+      }
+    },
+    {
+      "id": "ia",
+      "label": {
+        "fr": "Intelligence artificielle & automatisation",
+        "en": "Artificial intelligence & automation"
+      },
+      "filterLabel": {
+        "fr": "IA & automatisation",
+        "en": "AI & automation"
+      }
+    },
+    {
+      "id": "fabrication",
+      "label": {
+        "fr": "Fabrication & design",
+        "en": "Manufacturing & design"
+      },
+      "filterLabel": {
+        "fr": "Fabrication",
+        "en": "Manufacturing"
+      }
+    },
+    {
+      "id": "agritech",
+      "label": {
+        "fr": "AgriTech",
+        "en": "AgriTech"
+      },
+      "filterLabel": {
+        "fr": "AgriTech",
+        "en": "AgriTech"
+      }
+    }
+  ],
+  "statuses": [
+    {
+      "id": "mvp",
+      "label": {
+        "fr": "Prototype fonctionnel",
+        "en": "Working prototype"
+      }
+    },
+    {
+      "id": "dev",
+      "label": {
+        "fr": "En développement",
+        "en": "In development"
+      }
+    },
+    {
+      "id": "conception",
+      "label": {
+        "fr": "En conception",
+        "en": "In design"
+      }
+    },
+    {
+      "id": "recherche",
+      "label": {
+        "fr": "Recherche de financement",
+        "en": "Seeking funding"
+      }
+    }
+  ],
+  "projects": [
+    {
+      "id": "afrolink",
+      "theme": "logistique",
+      "status": "mvp",
+      "name": "Afrolink Delivery",
+      "tagline": {
+        "fr": "La logistique sans frontières.",
+        "en": "Logistics without borders."
+      },
+      "problem": {
+        "fr": "Les entreprises et les particuliers ont du mal à trouver des livreurs fiables entre l'Afrique et l'étranger, avec peu de visibilité sur l'acheminement.",
+        "en": "Businesses and individuals struggle to find reliable couriers between Africa and abroad, with little visibility into the shipment."
+      },
+      "solution": {
+        "fr": "Une plateforme intelligente de mise en relation, avec suivi en temps réel et gestion optimisée des flux.",
+        "en": "A smart matchmaking platform with real-time tracking and optimised flow management."
+      },
+      "tech": [
+        "React Native",
+        "Node.js",
+        {
+          "fr": "API de géolocalisation",
+          "en": "Geolocation API"
+        }
+      ],
+      "link": {
+        "url": "https://github.com/LeKani/Afrolink/tree/master",
+        "label": {
+          "fr": "Consulter le code sur GitHub",
+          "en": "View the code on GitHub"
+        }
+      },
+      "order": 1
+    },
+    {
+      "id": "servilink",
+      "theme": "logistique",
+      "status": "conception",
+      "name": "ServiLink",
+      "tagline": {
+        "fr": "Le quotidien des résidences, simplifié.",
+        "en": "Everyday residential life, simplified."
+      },
+      "problem": {
+        "fr": "Les résidences et copropriétés jonglent avec de multiples prestataires dispersés pour les services du quotidien.",
+        "en": "Residences and co-ops juggle multiple scattered providers for everyday services."
+      },
+      "solution": {
+        "fr": "Une plateforme unique pour connecter résidences et prestataires : petit-déjeuner, chauffeurs, conciergerie.",
+        "en": "A single platform connecting residences and providers: breakfast, drivers, concierge."
+      },
+      "tech": ["React Native", "Node.js", "MongoDB"],
+      "link": null,
+      "order": 2
+    },
+    {
+      "id": "edulink",
+      "theme": "formation",
+      "status": "dev",
+      "name": "EduLink",
+      "tagline": {
+        "fr": "Apprendre, où que l'on soit.",
+        "en": "Learning, wherever you are."
+      },
+      "problem": {
+        "fr": "Trouver une formation en ligne fiable et adaptée à son niveau reste un parcours confus pour beaucoup d'apprenants.",
+        "en": "Finding a reliable online course suited to your level remains a confusing journey for many learners."
+      },
+      "solution": {
+        "fr": "Une plateforme qui met en relation organismes de formation et apprenants, avec suivi pédagogique et certification.",
+        "en": "A platform connecting training providers and learners, with progress tracking and certification."
+      },
+      "tech": ["Next.js", "Django", "PostgreSQL"],
+      "link": null,
+      "order": 3
+    },
+    {
+      "id": "iagents",
+      "theme": "ia",
+      "status": "dev",
+      "name": "IAgents",
+      "tagline": {
+        "fr": "Des agents IA qui travaillent vraiment pour vous.",
+        "en": "AI agents that actually work for you."
+      },
+      "problem": {
+        "fr": "Particuliers et entreprises passent un temps précieux sur des tâches répétitives d'information et de support.",
+        "en": "Individuals and businesses spend valuable time on repetitive information and support tasks."
+      },
+      "solution": {
+        "fr": "Une suite d'agents IA spécialisés : assistants conversationnels et assistants documentaires, sur mesure.",
+        "en": "A suite of specialised AI agents: custom conversational assistants and document assistants."
+      },
+      "tech": ["Python", "LangChain", "Claude API", "Vector DB"],
+      "link": null,
+      "order": 4
+    },
+    {
+      "id": "autopro",
+      "theme": "ia",
+      "status": "recherche",
+      "name": "Automation Pro",
+      "tagline": {
+        "fr": "Moins de tâches, plus de valeur.",
+        "en": "Fewer tasks, more value."
+      },
+      "problem": {
+        "fr": "Les équipes RH et comptables perdent un temps considérable sur des processus manuels et répétitifs.",
+        "en": "HR and finance teams lose considerable time on manual, repetitive processes."
+      },
+      "solution": {
+        "fr": "Des solutions d'automatisation des processus d'entreprise, pour libérer du temps aux équipes.",
+        "en": "Business process automation solutions that free up time for teams."
+      },
+      "tech": [
+        "Python",
+        "RPA",
+        "n8n",
+        {
+          "fr": "APIs internes",
+          "en": "Internal APIs"
+        }
+      ],
+      "link": null,
+      "order": 5
+    },
+    {
+      "id": "light3d",
+      "theme": "fabrication",
+      "status": "conception",
+      "name": "3D-Light",
+      "tagline": {
+        "fr": "Votre lampe, imaginée par vous.",
+        "en": "Your lamp, designed by you."
+      },
+      "problem": {
+        "fr": "La personnalisation d'objets du quotidien reste réservée à des designers ou des budgets élevés.",
+        "en": "Customising everyday objects remains reserved for designers or large budgets."
+      },
+      "solution": {
+        "fr": "Une plateforme de configuration et de génération de lampes personnalisées, fabriquées à la demande en impression 3D.",
+        "en": "A configurator that generates custom lamps, made to order with 3D printing."
+      },
+      "tech": [
+        "Three.js",
+        "React",
+        {
+          "fr": "Impression 3D",
+          "en": "3D printing"
+        }
+      ],
+      "link": null,
+      "order": 6
+    },
+    {
+      "id": "agritech-connect",
+      "theme": "agritech",
+      "status": "recherche",
+      "name": "AgriTech Connect",
+      "tagline": {
+        "fr": "Cultiver avec précision.",
+        "en": "Growing with precision."
+      },
+      "problem": {
+        "fr": "Les exploitants agricoles manquent souvent de visibilité en temps réel sur l'état de leurs cultures et de leur élevage.",
+        "en": "Farmers often lack real-time visibility into the state of their crops and livestock."
+      },
+      "solution": {
+        "fr": "Des capteurs terrain connectés et des tableaux de bord temps réel pour une agriculture de précision.",
+        "en": "Connected field sensors and real-time dashboards for precision farming."
+      },
+      "tech": [
+        {
+          "fr": "Capteurs IoT",
+          "en": "IoT sensors"
+        },
+        "MQTT",
+        "Python"
+      ],
+      "link": null,
+      "order": 7
+    },
+    {
+      "id": "farmlink",
+      "theme": "agritech",
+      "status": "conception",
+      "name": "FarmLink",
+      "tagline": {
+        "fr": "Du champ à l'assiette, sans détour.",
+        "en": "From field to plate, no detour."
+      },
+      "problem": {
+        "fr": "Les producteurs agricoles ont un accès limité aux clients directs, et les marges disparaissent dans les intermédiaires.",
+        "en": "Farmers have limited access to direct customers, and margins disappear into middlemen."
+      },
+      "solution": {
+        "fr": "Une plateforme de mise en relation directe entre producteurs et clients, pour des circuits courts et plus équitables.",
+        "en": "A platform connecting producers directly with customers, for shorter, fairer supply chains."
+      },
+      "tech": [
+        "React",
+        "Node.js",
+        {
+          "fr": "Géolocalisation",
+          "en": "Geolocation"
+        }
+      ],
+      "link": null,
+      "order": 8
+    }
+  ]
+}
