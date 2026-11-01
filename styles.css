@@ -287,6 +287,11 @@
   .project-filters button:hover{border-color:var(--orange-500); color:var(--orange-500); transform:translateY(-1px);}
   .project-filters button.is-active{background:var(--navy-950); border-color:var(--navy-950); color:var(--white);}
   .theme-group.is-hidden{display:none;}
+  .portfolio-loading,
+  .portfolio-error{
+    color:var(--slate); font-size:15px; padding:12px 0 40px;
+  }
+  .portfolio-error{color:var(--orange-500);}
   .theme-title{
     font-family:'Space Grotesk', sans-serif; font-size:15px; font-weight:600;
     color:var(--navy-950); margin-bottom:22px; padding-bottom:14px; border-bottom:1px solid var(--line);
